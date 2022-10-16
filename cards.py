@@ -1,6 +1,9 @@
 import random
 
 
+# global variable to hold the deck size (52 cards)
+DECK_SIZE = 52
+
 # class to determine the suit of the card being created
 class Suit:
     suit = None
@@ -34,7 +37,13 @@ class Card:
 # will create 52 cards and store them in a data structure
 # will also shuffle cards and pull the top card on each call
 class Deck:
-    pass
+    card = None
+
+    def __init__(self, suit, value):
+        self.card = []
+
+        for index in range(DECK_SIZE):
+            pass
 
 
 
