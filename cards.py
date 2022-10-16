@@ -4,6 +4,7 @@ import random
 # global variable to hold the deck size (52 cards)
 DECK_SIZE = 52
 
+
 # class to determine the suit of the card being created
 class Suit:
     suit = None
@@ -42,8 +43,22 @@ class Deck:
     def __init__(self, suit, value):
         self.card = []
 
-        for index in range(DECK_SIZE):
-            pass
+        # creates a deck of 52 cards of different suits and values
+        for index in range(0, DECK_SIZE + 1):
+            new_card = Card(Suit(suit), CardValue(value))
+            self.add(new_card)
+
+    # prints the deck
+    def print_deck(self):
+        for card in self.card:
+            print(card)
+
+    # adds card to the deck
+    def add(self, card):
+        self.card.append(card)
 
 
+
+# test code to print the deck of cards
+deck = Deck("Hearts", 7)
 
