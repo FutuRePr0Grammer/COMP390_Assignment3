@@ -32,7 +32,7 @@ class Card:
 
     # will make sure doesn't print the address of each card object
     def __str__(self):
-        return 'Suit: {}, Value = {}'.format(self.suit, self.value)
+        return 'Suit: {}, Value : {}'.format(self.suit, self.value)
 
 
 # will create 52 cards and store them in a data structure
@@ -40,13 +40,70 @@ class Card:
 class Deck:
     card = None
 
-    def __init__(self, suit, value):
+    def __init__(self):
         self.card = []
 
         # creates a deck of 52 cards of different suits and values
+        """
         for index in range(0, DECK_SIZE + 1):
-            new_card = Card(Suit(suit), CardValue(value))
+            new_card = Card(Suit("Hearts"), CardValue(6))
             self.add(new_card)
+        """
+        for index in range(0, (DECK_SIZE / 4) + 1):
+            if index == 11:
+                new_card = Card(Suit("Hearts"), CardValue("Jack"))
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card(Suit("Hearts"), CardValue("Queen"))
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card(Suit("Hearts"), CardValue("King"))
+                self.add(new_card)
+            else:
+                new_card = Card(Suit("Hearts"), CardValue(index))
+                self.add(new_card)
+
+        for index in range((DECK_SIZE / 4) + 1, 2 * (DECK_SIZE / 4) + 1):
+            if index == 11:
+                new_card = Card(Suit("Diamonds"), CardValue("Jack"))
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card(Suit("Diamonds"), CardValue("Queen"))
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card(Suit("Diamonds"), CardValue("King"))
+                self.add(new_card)
+            else:
+                new_card = Card(Suit("Diamonds"), CardValue(index))
+                self.add(new_card)
+
+        for index in range(2 * (DECK_SIZE / 4) + 1, 3 * (DECK_SIZE / 4) + 1):
+            if index == 11:
+                new_card = Card(Suit("Aces"), CardValue("Jack"))
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card(Suit("Aces"), CardValue("Queen"))
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card(Suit("Aces"), CardValue("King"))
+                self.add(new_card)
+            else:
+                new_card = Card(Suit("Aces"), CardValue(index))
+                self.add(new_card)
+
+        for index in range(3 * (DECK_SIZE / 4) + 1, DECK_SIZE + 1):
+            if index == 11:
+                new_card = Card(Suit("Clubs"), CardValue("Jack"))
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card(Suit("Clubs"), CardValue("Queen"))
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card(Suit("Clubs"), CardValue("King"))
+                self.add(new_card)
+            else:
+                new_card = Card(Suit("Clubs"), CardValue(index))
+                self.add(new_card)
 
     # prints the deck
     def print_deck(self):
@@ -60,5 +117,6 @@ class Deck:
 
 
 # test code to print the deck of cards
-deck = Deck("Hearts", 7)
+deck = Deck()
+deck.print_deck()
 
