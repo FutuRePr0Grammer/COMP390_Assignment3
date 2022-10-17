@@ -143,16 +143,16 @@ class Deck:
 
         for index in range(1, (DECK_SIZE // 4) + 1):
             if index == 11:
-                new_card = Card("Aces", "Jack")
+                new_card = Card("Spades", "Jack")
                 self.add(new_card)
             elif index == 12:
-                new_card = Card("Aces", "Queen")
+                new_card = Card("Spades", "Queen")
                 self.add(new_card)
             elif index == 13:
-                new_card = Card("Aces", "King")
+                new_card = Card("Spades", "King")
                 self.add(new_card)
             else:
-                new_card = Card("Aces", index)
+                new_card = Card("Spades", index)
                 self.add(new_card)
 
         for index in range(1, (DECK_SIZE // 4) + 1):
