@@ -236,9 +236,17 @@ class Deck:
     def add(self, card):
         self.card.append(card)
 
+    # shuffles the deck
+    def shuffle(self):
+        random.shuffle(self.card)
 
 
-# test code to print the deck of cards
+# test code to print the deck of cards, shuffle, and get top card
+print("Before Shuffling Deck")
 deck = Deck()
 deck.print_deck()
+print("After Shuffling Deck")
+deck.shuffle()
+deck.print_deck()
+
 
