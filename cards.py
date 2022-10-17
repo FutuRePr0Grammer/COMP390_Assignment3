@@ -113,7 +113,64 @@ class Deck:
         """
         # below works, prints values.
         # TODO: Fix this mess below. Messy, indexes hardcoded, none of classes used
-        for index in range(0, (DECK_SIZE // 4) + 1):
+        for index in range(1, (DECK_SIZE // 4) + 1):
+            if index == 11:
+                new_card = Card("Hearts", "Jack")
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card("Hearts", "Queen")
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card("Hearts", "King")
+                self.add(new_card)
+            else:
+                new_card = Card("Hearts", index)
+                self.add(new_card)
+
+        for index in range(1, (DECK_SIZE // 4) + 1):
+            if index == 11:
+                new_card = Card("Diamonds", "Jack")
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card("Diamonds", "Queen")
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card("Diamonds", "King")
+                self.add(new_card)
+            else:
+                new_card = Card("Diamonds", index)
+                self.add(new_card)
+
+        for index in range(1, (DECK_SIZE // 4) + 1):
+            if index == 11:
+                new_card = Card("Aces", "Jack")
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card("Aces", "Queen")
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card("Aces", "King")
+                self.add(new_card)
+            else:
+                new_card = Card("Aces", index)
+                self.add(new_card)
+
+        for index in range(1, (DECK_SIZE // 4) + 1):
+            if index == 11:
+                new_card = Card("Clubs", "Jack")
+                self.add(new_card)
+            elif index == 12:
+                new_card = Card("Clubs", "Queen")
+                self.add(new_card)
+            elif index == 13:
+                new_card = Card("Clubs", "King")
+                self.add(new_card)
+            else:
+                new_card = Card("Clubs", index)
+                self.add(new_card)
+
+        """
+        for index in range(1, (DECK_SIZE // 4) + 1):
             if index == 11:
                 new_card = Card("Hearts", "Jack")
                 self.add(new_card)
@@ -168,6 +225,7 @@ class Deck:
             else:
                 new_card = Card("Clubs", index)
                 self.add(new_card)
+        """
 
     # prints the deck
     def print_deck(self):
