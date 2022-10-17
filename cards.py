@@ -240,13 +240,26 @@ class Deck:
     def shuffle(self):
         random.shuffle(self.card)
 
+    # get the top card
+    def get_top_card(self):
+        print("The Top Card is: {}".format(self.card[0]))
+        self.card.remove(self.card[0])
+
 
 # test code to print the deck of cards, shuffle, and get top card
 print("Before Shuffling Deck")
+print()
 deck = Deck()
 deck.print_deck()
+print()
 print("After Shuffling Deck")
+print()
 deck.shuffle()
 deck.print_deck()
+print()
+print("Getting Top Card")
+print()
+deck.get_top_card()
+deck.get_top_card()
 
 
