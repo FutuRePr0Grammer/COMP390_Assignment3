@@ -242,8 +242,10 @@ class Deck:
 
     # get the top card
     def get_top_card(self):
+        top_card = self.card[0]
         print("The Top Card is: {}".format(self.card[0]))
         self.card.remove(self.card[0])
+        return top_card
 
 
 # test code to print the deck of cards, shuffle, and get top card
@@ -259,7 +261,12 @@ deck.print_deck()
 print()
 print("Getting Top Card")
 print()
-deck.get_top_card()
-deck.get_top_card()
+top_card = deck.get_top_card()
+print("Testing top card was actually stored correctly")
+print("TOP CARD: {}".format(top_card))
+top_card = deck.get_top_card()
+print("TOP CARD: {}".format(top_card))
+
+
 
 
